@@ -1,5 +1,8 @@
 package com.techprimers.kafka.springbootkafkaconsumerexample.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class ProductLocation {
     Integer std;
     String sku, store_number, selling_location_type, sub_category, location_indicator, product_sequence_within_subcat, width, capacity, store_aisle_id,

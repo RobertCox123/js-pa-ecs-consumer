@@ -1,14 +1,34 @@
 package com.techprimers.kafka.springbootkafkaconsumerexample.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import java.util.Date;
 
+
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class PlanogramDetails {
     String homeLoc, hierCd, hierTypCd, aisle, bay, shelfType, shelf, shelfSeq, defaultStyle, prdCd,prdTypCd,
             attr_1,attr_2,attr_3,attr_4,attr_5,attr_6;
-    Date startDate, endDate;
+    String startDate, endDate;
     Integer facings, depth,defaultPrtQty;
     Float prdWidth,prdHeight;
     Boolean checkProduct;
+
+    public String getStartDate() {
+        return startDate;
+    }
+
+    public void setStartDate(String startDate) {
+        this.startDate = startDate;
+    }
+
+    public String getEndDate() {
+        return endDate;
+    }
+
+    public void setEndDate(String endDate) {
+        this.endDate = endDate;
+    }
 
     public String getHomeLoc() {
         return homeLoc;
@@ -146,21 +166,7 @@ public class PlanogramDetails {
         this.attr_6 = attr_6;
     }
 
-    public Date getStartDate() {
-        return startDate;
-    }
 
-    public void setStartDate(Date startDate) {
-        this.startDate = startDate;
-    }
-
-    public Date getEndDate() {
-        return endDate;
-    }
-
-    public void setEndDate(Date endDate) {
-        this.endDate = endDate;
-    }
 
     public Integer getFacings() {
         return facings;
@@ -214,7 +220,7 @@ public class PlanogramDetails {
 
     }
 
-    public PlanogramDetails(String homeLoc, String hierCd, String hierTypCd, String aisle, String bay, String shelfType, String shelf, String shelfSeq, String defaultStyle, String prdCd, String prdTypCd, String attr_1, String attr_2, String attr_3, String attr_4, String attr_5, String attr_6, Date startDate, Date endDate, Integer facings, Integer depth, Integer defaultPrtQty, Float prdWidth, Float prdHeight, Boolean checkProduct) {
+    public PlanogramDetails(String homeLoc, String hierCd, String hierTypCd, String aisle, String bay, String shelfType, String shelf, String shelfSeq, String defaultStyle, String prdCd, String prdTypCd, String attr_1, String attr_2, String attr_3, String attr_4, String attr_5, String attr_6, String startDate, String endDate, Integer facings, Integer depth, Integer defaultPrtQty, Float prdWidth, Float prdHeight, Boolean checkProduct) {
         this.homeLoc = homeLoc;
         this.hierCd = hierCd;
         this.hierTypCd = hierTypCd;

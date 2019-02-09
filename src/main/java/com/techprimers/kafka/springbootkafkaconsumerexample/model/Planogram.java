@@ -1,14 +1,32 @@
 package com.techprimers.kafka.springbootkafkaconsumerexample.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import java.util.Date;
 
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class Planogram {
     String userName, token, planoID, planoType, planoName;
-    Date effectiveStartDate, endDate;
+    String effectiveStartDate, endDate;
 
     PlanogramDetails planogramDetails =new PlanogramDetails();
 
 
+    public String getEffectiveStartDate() {
+        return effectiveStartDate;
+    }
+
+    public void setEffectiveStartDate(String effectiveStartDate) {
+        this.effectiveStartDate = effectiveStartDate;
+    }
+
+    public String getEndDate() {
+        return endDate;
+    }
+
+    public void setEndDate(String endDate) {
+        this.endDate = endDate;
+    }
 
     public String getUserName() {
         return userName;
@@ -50,21 +68,7 @@ public class Planogram {
         this.planoName = planoName;
     }
 
-    public Date getEffectiveStartDate() {
-        return effectiveStartDate;
-    }
 
-    public void setEffectiveStartDate(Date effectiveStartDate) {
-        this.effectiveStartDate = effectiveStartDate;
-    }
-
-    public Date getEndDate() {
-        return endDate;
-    }
-
-    public void setEndDate(Date endDate) {
-        this.endDate = endDate;
-    }
 
     public PlanogramDetails getPlanogramDetails() {
         return planogramDetails;
@@ -74,7 +78,7 @@ public class Planogram {
         this.planogramDetails = planogramDetails;
     }
 
-    public Planogram(String userName, String token, String planoID, String planoType, String planoName, Date effectiveStartDate, Date endDate, PlanogramDetails planogramDetails) {
+    public Planogram(String userName, String token, String planoID, String planoType, String planoName, String effectiveStartDate, String endDate, PlanogramDetails planogramDetails) {
         this.userName = userName;
         this.token = token;
         this.planoID = planoID;

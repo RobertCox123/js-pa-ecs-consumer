@@ -1,11 +1,12 @@
 package com.techprimers.kafka.springbootkafkaconsumerexample.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 
 import javax.xml.bind.annotation.XmlRootElement;
 
-@XmlRootElement(name="vinodObjet")
-@JsonSerialize
+@XmlRootElement
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class User {
 
     private String userName, password, apiToken;
@@ -38,5 +39,9 @@ public class User {
         this.userName = userName;
         this.password = password;
         this.apiToken = apiToken;
+    }
+
+    public User(){
+        
     }
 }
