@@ -1,15 +1,15 @@
-package com.techprimers.kafka.springbootkafkaconsumerexample.model;
+package com.vinod.kafka.springbootkafkaconsumerexample.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
-import java.util.Date;
+import java.util.List;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Planogram {
     String userName, token, planoID, planoType, planoName;
     String effectiveStartDate, endDate;
 
-    PlanogramDetails planogramDetails =new PlanogramDetails();
+    List<PlanogramDetails> planogramDetails;
 
 
     public String getEffectiveStartDate() {
@@ -69,16 +69,16 @@ public class Planogram {
     }
 
 
-
-    public PlanogramDetails getPlanogramDetails() {
+    public List<PlanogramDetails> getPlanogramDetails() {
         return planogramDetails;
     }
 
-    public void setPlanogramDetails(PlanogramDetails planogramDetails) {
+    public void setPlanogramDetails(List<PlanogramDetails> planogramDetails) {
         this.planogramDetails = planogramDetails;
     }
 
-    public Planogram(String userName, String token, String planoID, String planoType, String planoName, String effectiveStartDate, String endDate, PlanogramDetails planogramDetails) {
+    public Planogram(String userName, String token, String planoID, String planoType, String planoName,
+                     String effectiveStartDate, String endDate, List<PlanogramDetails> planogramDetails) {
         this.userName = userName;
         this.token = token;
         this.planoID = planoID;

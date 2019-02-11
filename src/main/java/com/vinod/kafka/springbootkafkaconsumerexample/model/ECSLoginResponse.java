@@ -1,4 +1,4 @@
-package com.techprimers.kafka.springbootkafkaconsumerexample.model;
+package com.vinod.kafka.springbootkafkaconsumerexample.model;
 
 public class ECSLoginResponse {
 

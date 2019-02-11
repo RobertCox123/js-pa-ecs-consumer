@@ -1,4 +1,4 @@
-package com.techprimers.kafka.springbootkafkaconsumerexample;
+package com.vinod.kafka.springbootkafkaconsumerexample;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
