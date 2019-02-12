@@ -1,6 +1,6 @@
 package com.vinod.kafka.springbootkafkaconsumerexample.config;
 
-import com.vinod.kafka.springbootkafkaconsumerexample.ECSLogin.ECSLoginService;
+import com.vinod.kafka.springbootkafkaconsumerexample.ecslogin.ECSLoginService;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
@@ -12,8 +12,8 @@ public class DataConfig {
     public static String PASSWORD;
     public static String API_TOKEN;
     public static String LOGON_URL;
-    public static String CREATE_URL;
-    public static String UPDATE_URL;
+    //public static String CREATE_URL;
+    //public static String UPDATE_URL;
     public static String UPSERT_URL;
     public static String DELETE_URL;
 
@@ -37,16 +37,19 @@ public class DataConfig {
         LOGON_URL = ecs_logon_url;
     }
 
-    @Value("${ecs_planogram_create_url}")
+  /*  @Value("${ecs_planogram_create_url}")
     public void setECSPlanogramCreateUrl(String ecs_planogram_create_url) {
         CREATE_URL = ecs_planogram_create_url;
     }
 
-    @Value("${ecs_planogram_update_url}")
-    public void setECSPlanogramUpdateUrl(String ecs_planogram_update_url) {
-        UPDATE_URL = ecs_planogram_update_url;
-    }
+    */
 
+    /*    @Value("${ecs_planogram_update_url}")
+        public void setECSPlanogramUpdateUrl(String ecs_planogram_update_url) {
+            UPDATE_URL = ecs_planogram_update_url;
+        }
+
+    */
     @Value("${ecs_planogram_upsert_url}")
     public void setECSPlanogramUpsertUrl(String ecs_planogram_upsert_url) {
         UPSERT_URL = ecs_planogram_upsert_url;
