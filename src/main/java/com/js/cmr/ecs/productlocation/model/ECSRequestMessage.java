@@ -1,4 +1,4 @@
-package com.vinod.kafka.springbootkafkaconsumerexample.model;
+package com.js.cmr.ecs.productlocation.model;
 
 import java.util.ArrayList;
 import java.util.List;

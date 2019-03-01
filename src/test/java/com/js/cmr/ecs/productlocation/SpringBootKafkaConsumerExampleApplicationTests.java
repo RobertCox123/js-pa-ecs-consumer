@@ -1,4 +1,4 @@
-package com.vinod.kafka.springbootkafkaconsumerexample;
+package com.js.cmr.ecs.productlocation;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

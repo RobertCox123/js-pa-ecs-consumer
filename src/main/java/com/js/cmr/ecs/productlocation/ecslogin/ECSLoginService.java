@@ -1,9 +1,9 @@
-package com.vinod.kafka.springbootkafkaconsumerexample.ecslogin;
+package com.js.cmr.ecs.productlocation.ecslogin;
 
 import com.google.gson.Gson;
-import com.vinod.kafka.springbootkafkaconsumerexample.config.DataConfig;
-import com.vinod.kafka.springbootkafkaconsumerexample.model.ECSLoginResponse;
-import com.vinod.kafka.springbootkafkaconsumerexample.model.User;
+import com.js.cmr.ecs.productlocation.config.DataConfig;
+import com.js.cmr.ecs.productlocation.model.ECSLoginResponse;
+import com.js.cmr.ecs.productlocation.model.User;
 import org.springframework.http.*;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
